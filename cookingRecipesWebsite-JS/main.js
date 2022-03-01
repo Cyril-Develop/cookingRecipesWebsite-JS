@@ -7,7 +7,7 @@ inputSearch.addEventListener('keyup', () => {
 })
 
 function correspondance(letters, elements) {
-    for(let i = 0; i < elements.length; i++) {
+    for(let i = 0; i < elements.length; i++) {  
         if(elements[i].textContent.toLowerCase().includes(letters)) {
             elements[i].style.display = "block"
         } else {
