@@ -4,16 +4,6 @@
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar{
-    background: transparent;
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb{
-    border-radius: 20px;
-    background: linear-gradient( to bottom, rgb(200, 200, 200), #0474B5, rgb(200, 200, 200));
-}
-
 body{
     width: 100%;
     background: #7C5F4B; 

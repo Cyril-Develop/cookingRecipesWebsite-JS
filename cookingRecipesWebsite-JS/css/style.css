@@ -4,16 +4,6 @@
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar{
-    background: black;
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb{
-    border-radius: 20px;
-    background: linear-gradient( to bottom, rgb(200, 200, 200), #0474B5, rgb(200, 200, 200));
-}
-
 body{
     background: #C4C4C4;
 }
@@ -27,11 +17,10 @@ body{
 
 .container-accueil h1{
     text-align: center;
-    font-size: clamp(70px, 4vw, 150px);
+    font-size: clamp(30px, 5vw, 150px);
     width: 100%;
     letter-spacing: 3px;
     font-weight: lighter;
-    margin-bottom: 30px;
     background-color: #0474B5;
     font-family: 'Shrikhand', cursive;
     color: rgb(200, 200, 200);
@@ -43,6 +32,7 @@ body{
 .container-search{
     display: flex;
     width: 350px;
+    margin: 30px 0;
     border-radius: 10px;
     background-color: #0474B5;
     box-shadow: 0 2px 8px black;
@@ -77,7 +67,7 @@ input[type="text"]{
 .container-recettes{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     width: 90%;
     max-width: 1800px;
     min-width: 280px;
@@ -87,18 +77,9 @@ input[type="text"]{
     position: relative;
     width: 500px;
     height: 500px;
-    margin: 30px;
+    margin: 0 30px 60px;
     border-radius: 10px;
-    transform-style: preserve-3d;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.479);
-}
-
-.block-recette:hover .derriere{
-    height: 40%;
-}
-
-.block-recette:hover .devant{
-    filter: blur(4px);
 }
 
 .devant{
@@ -119,34 +100,40 @@ input[type="text"]{
     border-radius: 10px;
 }
 
-.derriere{
+.overlay{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding: 0 30px;
     width: 100%;
     height: 0;
-    overflow: hidden;
+    overflow: hidden; 
     color: white;
     background-color: #0000009a;
     transition: height 0.4s ease-in-out;
 }
 
-.derriere h4{
-    text-align: center;
-    font-size: 40px;
+.overlay h4{
+    font-size: clamp(30px, 3vw, 40px);
     margin-bottom: 20px;
     font-family: 'Merriweather', serif;
 }
 
+.block-recette:hover .overlay{
+    height: 40%;
+}
+
+.block-recette:hover .devant{
+    filter: blur(4px);
+}
+
 .btn-instruction{
     position: relative;
-    display: block;
-    margin: 0 auto;
     width: 170px;
     height: 50px;
     cursor: pointer;
@@ -196,6 +183,21 @@ input[type="text"]{
 /*************** Responsive **********************/
 
 
-@media screen and(max-width:620px) {
-    
+@media screen and (max-width:425px) {
+
+   /***************** Searh barre ****************/
+
+    .container-search{
+        width: 250px;
+    }
+
+    input[type="text"]{
+        width: 200px;
+    }
+
+    /*********** Blocks recettes ******************/
+
+    .block-recette{
+        margin: 20px 0;
+    }
 }

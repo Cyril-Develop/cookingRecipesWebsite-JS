@@ -1,8 +1,8 @@
 const inputSearch = document.getElementById('search-input');
+const blockRecettes = document.querySelectorAll('.block-recette');
 
 inputSearch.addEventListener('keyup', () => {
     let searchedLetters = inputSearch.value;
-    const blockRecettes = document.querySelectorAll('.block-recette');
     correspondance(searchedLetters, blockRecettes);
 })
 
