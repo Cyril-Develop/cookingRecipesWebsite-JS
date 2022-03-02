@@ -141,7 +141,7 @@ input[type="text"]{
     font-size: 25px;
     font-weight: 600;
     z-index: 1;
-    overflow: hidden;
+    overflow: hidden; 
     border: none;
     box-shadow: 0 2px 8px rgba(255, 255, 255, 0.459);
     font-family: 'Karma', serif;

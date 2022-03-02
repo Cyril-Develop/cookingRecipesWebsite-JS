@@ -84,7 +84,7 @@ main{
     position: relative;
     z-index: 90;
     display: flex;
-    background: linear-gradient(to bottom, #C4C4C4, #0474B5);
+    /* background: linear-gradient(to bottom, #C4C4C4, #0474B5); */
     width: 90%;
     max-width: 1000px;
     margin: 50px auto ;
