@@ -1,0 +1,229 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #7C5F4B;
+}
+
+.titre{
+    position: relative;
+    z-index: 100;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titre h1 {
+    font-size: 75px;
+    letter-spacing: 3px; 
+    width: 100%; 
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Shrikhand', cursive;
+    color: rgb(200, 200, 200);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.479);
+    background: #0474B5;
+}
+
+.titre img{
+    width: 50px;
+    margin-left: 30px;
+}
+
+.titre:hover nav{
+    bottom:  -70px;
+}
+
+nav{
+    position: absolute;  
+    z-index: -1;
+    text-align: center;
+    bottom: 0;
+    font-size: 40px;
+    letter-spacing: 2px;
+    height: 70px; 
+    width: 100%;
+    transition: bottom 0.2s ease-in-out;
+    border-bottom: 1px solid black;
+    background: #0474B5;
+}
+
+nav a{
+    position: relative;
+    color: rgb(200, 200, 200);
+    font-weight: 900;
+    text-decoration: none;
+    font-family: 'Karma', serif;
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background-color: rgb(200, 200, 200);
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after{
+    width: 80%;
+}
+
+/******************** main *******************/
+
+main{
+    position: relative;
+    z-index: 90;
+    display: flex;
+    background: #C4C4C4;
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto ;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.493);
+}
+
+.container-image{
+    shape-outside: circle();
+    height: 400px;
+    width: 500px;
+    float: left;
+    padding: 0 100px 20px 0;
+}
+
+.container-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.678);
+}
+
+.info p{
+    line-height: 40px;
+}
+
+/********** block ingredients **************/
+
+.ingredients .btn-ingredient{
+    position: absolute;
+    z-index: -1;
+    width: 50px;
+    height: 330px;
+    font-size: 20px;
+    font-weight: 500;
+    top: 0;
+    right: 0;
+    border: none;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: 'Karma', serif;
+    cursor: pointer;
+    background-color: #0474B5;
+    color: white;
+    transition: right 0.4s ease-in-out;
+}
+
+main:hover .btn-ingredient{
+    right: -50px;
+}
+
+.liste-ingredient{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: -320px;
+    width: 320px;
+    font-size: 25px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.719);
+    background: #7C5F4B;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.liste-ingredient h4{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.liste-ingredient ul li{
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.btn-ingredient:focus + .liste-ingredient{
+    opacity: 1;
+    visibility:visible;
+}
+
+.block-instruction{
+    padding: 20px 30px;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    background: #C4C4C4;
+}
+
+.block-instruction p{
+    padding-top: 5px;
+    font-size: 25px;
+   text-align: justify;
+}
+
+.block-instruction a{
+    float: right;
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+    font-family: 'Karma', serif;
+}
+
+
+.instructions h3{
+    font-size: 35px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Shrikhand', cursive;
+    cursor: pointer;
+}
+
+/* class js */
+
+.instructions h3.active +  ul{
+    /* display: block; */
+    height: 160px;
+} 
+ /*  */
+
+.instructions h3 img{
+    width: 20px;
+    margin-left: 20px;
+}
+
+.instructions ul{
+    /* display: none; */
+    overflow: hidden;
+    height: 0;
+    font-size: 25px;
+    line-height: 40px;
+    padding-left: 30px;
+    transition: height 0.4s ease-in-out;
+}
+
