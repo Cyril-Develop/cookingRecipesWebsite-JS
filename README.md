@@ -1,4 +1,4 @@
-# Projet candidature formation "Développeur web" chez OpenClassrooms.
+# Candidature formation "Développeur web" chez OpenClassrooms.
 
 
 
