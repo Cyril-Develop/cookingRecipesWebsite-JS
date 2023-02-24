@@ -8,6 +8,15 @@ body{
     background: #7C5F4B; 
 }
 
+h1, h3{
+    font-family: 'Shrikhand', cursive;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Karma', serif;
+}
+
 .titre{
     display: flex;
     align-items: center;
@@ -27,7 +36,6 @@ body{
     font-size: clamp(30px, 8vw, 70px);
     width: 100%; 
     font-weight: lighter;
-    font-family: 'Shrikhand', cursive;
     color: rgb(200, 200, 200);
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.479);
     background: #0474B5;
@@ -60,8 +68,6 @@ nav a{
     position: relative;
     color: rgb(200, 200, 200);
     font-weight: 900;
-    text-decoration: none;
-    font-family: 'Karma', serif;
 }
 
 nav a::after{
@@ -89,8 +95,6 @@ main{
     width: 90%;
     max-width: 1000px;
     margin: 50px auto ;
-    border-radius: 10px;
-    border-top-right-radius: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.493);
 }
 
@@ -129,10 +133,10 @@ main{
     border: none;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-    font-family: 'Karma', serif;
     cursor: pointer;
     background-color: #0474B5;
     color: white;
+    font-family: 'Karma', serif;
     transition: right 0.4s ease-in-out;
 }
 
@@ -146,11 +150,10 @@ main:hover .btn-ingredient{
     top: 0;
     right: -300px;
     width: 300px;
-    font-size: 25px;
+    font-size: clamp(18px, 6vw, 25px);
     padding: 10px 25px;
-    border-radius: 10px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
     opacity: 0;
     visibility: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.719);
@@ -159,12 +162,8 @@ main:hover .btn-ingredient{
 }
 
 .liste-ingredient h4{
-    font-size: 30px;
+    font-size: clamp(20px, 6vw, 30px);
     margin-bottom: 10px;
-}
-
-.liste-ingredient ul li{
-    margin: 5px 0;
 }
 
 .btn-ingredient:focus + .liste-ingredient{
@@ -174,8 +173,6 @@ main:hover .btn-ingredient{
 
 .block-instruction{
     padding: 20px 30px;
-    border-radius: 10px;
-    border-top-right-radius: 0;
     background: #C4C4C4;
 }
 
@@ -187,10 +184,8 @@ main:hover .btn-ingredient{
 
 .block-instruction a{
     float: right;
-    text-decoration: none;
     color: black;
     font-style: italic;
-    font-family: 'Karma', serif;
 }
 
 .marinade h3,
@@ -199,7 +194,6 @@ main:hover .btn-ingredient{
     letter-spacing: 1px;
     text-align: center;
     font-weight: lighter;
-    font-family: 'Shrikhand', cursive;
     cursor: pointer;
 }
 
@@ -212,7 +206,6 @@ main:hover .btn-ingredient{
 } 
 
 ul li{
-    list-style: none;
     line-height: 40px;
     font-size: clamp(18px, 6vw, 25px);
 }
@@ -228,11 +221,19 @@ ul li{
     display: none;
 }
 
+.marinade ul li,
+.instructions ul li{
+    list-style: none;
+}
+
 @media screen and (max-width: 1620px) {
     .ingredients .btn-ingredient{
         right:unset;
         left: 0;
         z-index: 1;
+        width: 35px;
+        border-top-right-radius: unset;
+        border-top-right-radius: unset;
     }
     
     main:hover .btn-ingredient{
@@ -244,7 +245,7 @@ ul li{
         top: 0;
         right: unset;
         left: 0;
-        font-size: 25px;
+        border-top-right-radius: unset;
     }
 }
 

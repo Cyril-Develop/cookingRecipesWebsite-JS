@@ -2,7 +2,7 @@
 
 
 
-![screenshot du site](./ressources/screenshot.jpg)
+![screenshot du site](./ressources/screenshot.png)
 
 
 
